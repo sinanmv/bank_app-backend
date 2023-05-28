@@ -1,0 +1,50 @@
+                    
+                    backend For BankApp
+                ---------------------------
+                 NODEJS + EXPRESS + MONGODB
+            -------------------------------------
+BASIC STEPS
+---------------
+1.Creation of package.json file - npm init or(npm init -y)
+2.Create index.js file as entry point of server app.
+3.install express - npm i express 
+4.Import express in index.js - const express  = require("express");
+5.Create a server using Express in index.js(node.js) - express()
+6.Setup Port Number for server app - server-listen()
+7.install cors(cross origin resource sharing) To share data with different port number - npm i cors
+8.use cors in server app
+9.Parse json data to the js in server app - use express.json()
+10.To resolve client requests  get,put,post,delete
+11.Create DB and COllection in MONGODB
+12.Database connection with NODEJS server - mongoose(library)
+13. install mongoose - npm i mongoose
+14.Create a folder as services
+15.Create a file as DB.js in services
+16.In db,js 
+    1.Import mongoose
+    2.Define a connection string between express and mongoose
+    3.create a model and schema for storing data into the Database
+    4.export the COllection
+
+17.Logic to resolve the client request - Create a new file in services
+    in logic.js
+    - import db.js
+    - Create a arrow function for register and export it 
+
+18. login integration
+    1 Create a logic for login = login()
+    2 Login server  api call
+    3 Testing in postman ok ? frontend login services
+
+19. Balance Enquiry
+    Authorization-
+    1)JsonWebToken - JWT Token Install  - npm i jsonwebtoken
+
+    2)import  jwttoken into logic.js 
+    
+    3)generate a Token - sign()
+    using jwt token , generate token for user who logged in successfully.
+
+    logic =login successful + sign()
+
+    4) To set token into the local storage(frontend)
